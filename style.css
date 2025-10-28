@@ -1,0 +1,95 @@
+body {
+    font-family: sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.shop {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.filters {
+    margin-bottom: 30px;
+}
+
+.filters label {
+    padding: 8px 16px;
+    background: #fff;
+    border: 1px solid #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transform: 0.3;
+}
+
+.filters label:hover {
+    background: #ddd;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product {
+    width: 200px;
+    background: white;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px rgba(0, 0, 0, 0.1);
+    display: none;
+    transition: 0.3s;
+}
+
+.product img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+
+.price {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.buy-btn {
+    background-color: #ff6600;
+    color: white;
+    border: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.buy-btn:hover {
+    background-color: #dea27a;
+}
+
+/* Filter Logic */
+#all:checked~.products .product {
+    display: block;
+}
+
+#tea:checked~.products .tea,
+#smoothie:checked~.products .smoothie,
+#pancake:checked~.products .pancake {
+    display: block;
+}
